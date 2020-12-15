@@ -55,7 +55,8 @@
         <!--</el-menu-item>-->
         <el-menu-item index="5" v-popover:popover-personal>
           <!-- 用户信息 -->
-          <span class="user-info"><img :src="user.avatar"/>{{user.name}}</span>
+          <!-- <span class="user-info"><img :src="user.avatar"/>{{user.name}}</span> -->
+          <span class="user-info">{{user.name}}</span>
           <el-popover ref="popover-personal" placement="bottom-end" trigger="click" :visible-arrow="false">
             <personal-panel @changePwd="showDialog" :user="user"></personal-panel>
           </el-popover>
@@ -248,7 +249,8 @@
       }
     },
     mounted() {
-      this.sysName = "INCA Platform"
+      console.log("sessionStorage.getItem('companyid')",sessionStorage.getItem('companyid'))
+      this.sysName = "Platform"
       var user = sessionStorage.getItem("user")
       if (user) {
         this.user.name = user

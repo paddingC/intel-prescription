@@ -30,7 +30,6 @@ export default {
     if(!path) {
       path = menu.homeurl
     }
-    debugger
     // 通过菜单URL跳转至指定路由
     this.$router.push("/" + path)
     }

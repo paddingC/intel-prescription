@@ -1,10 +1,10 @@
 <template>
-  <div class=" login-container pull-height" @keyup.enter.native="login">
+  <div class=" login-container pull-height" @keyup.enter="login">
 
     <!--<p>北京英克后台管理系统</p>-->
     <section>
       <div class="logoP animated zoomInRight"><h2>
-        北京英克入驻企业端后台管理系统
+        后台管理系统
       </h2></div>
       <el-form :model="loginForm" :rules="fieldRules" ref="loginForm" label-position="left" label-width="0px"
                class="demo-ruleForm login-container1 animated fadeInLeft">
@@ -122,7 +122,7 @@
                 //sessionStorage.setItem('sessionId', res.data.details.sessionId) // 保存用户到本地会话
 
                 this.$store.commit('menuRouteLoaded', false) // 要求重新加载导航菜单
-                this.$api.login.getcompanyid({loginid: res.data.name}).then(data=>{
+                this.$api.login.getcompanyid({loginid: userInfo.loginid}).then(data=>{
                   if(data.status == 200){
                     sessionStorage.setItem('companyid', data.data.companyid) // 保存用户到本地会话
                     this.$router.push('/')  // 登录成功，跳转到主页

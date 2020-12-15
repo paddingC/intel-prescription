@@ -57,6 +57,7 @@ export default {
     },
     // tabs, 删除tab
     removeTabHandle (tabName) {
+      debugger
       this.mainTabs = this.mainTabs.filter(item => item.name !== tabName)
       if (this.mainTabs.length >= 1) {
         // 当前选中tab被删除

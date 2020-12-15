@@ -1,6 +1,6 @@
 export default {
     state: {
-        appName: "INCA",  // 应用名称
+        appName: "",  // 应用名称
         themeColor: "#00142a",  // 主题颜色
         oldThemeColor: "#00142a",   // 上一次主题颜色
         collapse:true,  // 导航栏收缩状态

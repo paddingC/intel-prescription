@@ -7,7 +7,7 @@
           <li>基于 Spring Boot、Spring Cloud、Vue、Element 的 Java EE 快速开发平台</li>
           <li>旨在提供一套简洁易用的解决方案，帮助用户有效降低项目开发难度和成本</li>
         </ul>
-        <div><img src="@/assets/logo-inca.png" style="width:200px;height:120px;object-fit: cover;border-radius: 10px;margin-top: 20px" /></div>
+        <!-- <div><img src="@/assets/logo-inca.png" style="width:200px;height:120px;object-fit: cover;border-radius: 10px;margin-top: 20px" /></div> -->
       </el-carousel-item>
       <el-carousel-item class="carousel-item-func">
         <h2>功能计划</h2>

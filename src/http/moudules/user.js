@@ -7,7 +7,7 @@ import axios from '../axios'
 // 保存
 export const save = (data) => {
     return axios({
-        url: 'clouduser/role/clouduser/save',
+        url: 'role/clouduser/save',
         method: 'post',
         data
     })
@@ -16,7 +16,7 @@ export const save = (data) => {
 
 export const updatepassword = (data) => {
   return axios({
-    url: 'clouduser/role/clouduser/updatepassword',
+    url: 'role/clouduser/updatepassword',
     method: 'post',
     data
   })
@@ -42,8 +42,7 @@ export const findPage = (data) => {
 // 查找用户的菜单权限标识集合
 export const findPermissions = (params) => {
     return axios({
-        url: 'webuser/role/user/findPermissions',
-        method: 'get',
-        params
+        url: 'role/user/findPermissions?loginid='+params,
+        method: 'get'
     })
 }
